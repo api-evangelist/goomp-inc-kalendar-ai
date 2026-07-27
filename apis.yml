@@ -1,8 +1,26 @@
 aid: goomp-inc-kalendar-ai
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goomp-inc-kalendar-ai.png
 name: Goomp Inc, Kalendar AI
-description: Goomp Inc, Kalendar AI is a company surfaced as a portfolio company of 500-global and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: Kalendar AI (Goomp Inc / Kalendar Inc, a Delaware corporation operating from New York) is an
+  autonomous AI sales-agent platform that automates B2B outbound prospecting end to end. It sources ideal-customer
+  prospects from a database of hundreds of millions of professionals and companies, generates and sends
+  personalized outreach through dedicated AI-managed mailbox infrastructure, qualifies replies, and books
+  meetings directly onto the user's calendar. The product is sold as a self-serve, per-agent subscription
+  and connects to common CRMs, calendars, and productivity tools. It was surfaced as a portfolio company
+  of 500 Global. As of this enrichment pass Kalendar AI publishes a marketing site and product app behind
+  Cloudflare, legal (terms/privacy) and sign-in pages, but no public developer API, OpenAPI specification,
+  SDK, or documented webhook surface.
 url: https://raw.githubusercontent.com/api-evangelist/goomp-inc-kalendar-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +30,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Artificial Intelligence
+- Sales
+- Sales Automation
+- Outbound
+- Lead Generation
+- Scheduling
+- Agents
+- Email
+- CRM
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +49,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/goomp-inc-kalendar-ai-domain-security.yml
 - type: Website
   url: https://kalendar.ai
+- type: SignUp
+  url: https://www.kalendar.ai/users/sign_in
+- type: TermsOfService
+  url: https://kalendar.ai/legal/terms
+- type: PrivacyPolicy
+  url: https://kalendar.ai/privacy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
