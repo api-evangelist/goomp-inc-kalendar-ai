@@ -12,15 +12,23 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goomp-inc-kalendar-ai.png
 name: Goomp Inc, Kalendar AI
-description: Kalendar AI (Goomp Inc / Kalendar Inc, a Delaware corporation operating from New York) is an
-  autonomous AI sales-agent platform that automates B2B outbound prospecting end to end. It sources ideal-customer
-  prospects from a database of hundreds of millions of professionals and companies, generates and sends
-  personalized outreach through dedicated AI-managed mailbox infrastructure, qualifies replies, and books
-  meetings directly onto the user's calendar. The product is sold as a self-serve, per-agent subscription
-  and connects to common CRMs, calendars, and productivity tools. It was surfaced as a portfolio company
-  of 500 Global. As of this enrichment pass Kalendar AI publishes a marketing site and product app behind
-  Cloudflare, legal (terms/privacy) and sign-in pages, but no public developer API, OpenAPI specification,
-  SDK, or documented webhook surface.
+description: >-
+  Kalendar AI (Goomp Inc / Kalendar Inc, a Delaware corporation operating from New York) is an
+  autonomous AI sales-agent platform that automates B2B outbound prospecting end to end. It sources
+  ideal-customer prospects from a database of hundreds of millions of professionals and companies,
+  generates and sends personalized outreach through dedicated AI-managed mailbox infrastructure,
+  qualifies replies, and books meetings directly onto the user's calendar. As of the 2026-08-13
+  enrichment pass the company has rebranded to Cockpit AI and migrated to oncockpit.ai —
+  kalendar.ai now 301-redirects site-wide, and the new site's robots.txt carries an explicit
+  "Block legacy Kalendar.ai paths" section. The product is now framed as named AI workers you
+  "hire" (Vinay for outbound, Amara), which research prospects, draft proposal documents, send
+  from the customer's own email and LinkedIn accounts, and book meetings, with a human approval
+  step before anything ships. Investors named on the site are 500 Global, Boost VC, Asymmetry
+  Ventures and Village Global. The company runs a live API host (api.oncockpit.ai, which
+  self-identifies as the "Cockpit AI API") and still serves a legacy ChatGPT plugin manifest at
+  /.well-known/ai-plugin.json declaring OAuth with read/write scopes, but it publishes no
+  developer portal, no API reference, no OpenAPI, no SDK, no webhook catalog, no MCP server and no
+  pricing page.
 url: https://raw.githubusercontent.com/api-evangelist/goomp-inc-kalendar-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -28,9 +36,16 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-rebrand:
+  from: Kalendar AI
+  from_domain: kalendar.ai
+  to: Cockpit AI
+  to_domain: oncockpit.ai
+  observed: '2026-08-13'
+  evidence: https://kalendar.ai/ returns HTTP 301 to https://oncockpit.ai/
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Artificial Intelligence
@@ -42,7 +57,28 @@ tags:
 - Agents
 - Email
 - CRM
-apis: []
+apis:
+- name: Cockpit AI API
+  description: >-
+    The API host behind the Cockpit AI (formerly Kalendar AI) product. The root of
+    https://api.oncockpit.ai returns HTTP 200 with {"name":"Cockpit AI API","status":"active"} and
+    /health returns OK, and the host serves a ChatGPT plugin manifest declaring an OAuth flow with
+    read/write scopes. No public reference, OpenAPI, or developer documentation is published for
+    it, and its robots.txt disallows all crawling — this entry records a real, live, self-declared
+    API surface, not a published developer program.
+  humanURL: https://oncockpit.ai
+  baseURL: https://api.oncockpit.ai
+  tags:
+  - Sales Automation
+  - Agents
+  - Outbound
+  properties:
+  - type: WellKnown
+    url: well-known/goomp-inc-kalendar-ai-well-known.yml
+  - type: Authentication
+    url: authentication/goomp-inc-kalendar-ai-authentication.yml
+  - type: OAuthScopes
+    url: scopes/goomp-inc-kalendar-ai-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -52,15 +88,35 @@ common:
 - type: DomainSecurity
   url: security/goomp-inc-kalendar-ai-domain-security.yml
 - type: Website
-  url: https://kalendar.ai
+  url: https://oncockpit.ai
 - type: SignUp
-  url: https://www.kalendar.ai/users/sign_in
+  url: https://oncockpit.ai/auth/login
 - type: TermsOfService
-  url: https://kalendar.ai/legal/terms
+  url: https://oncockpit.ai/terms
 - type: PrivacyPolicy
-  url: https://kalendar.ai/privacy
+  url: https://oncockpit.ai/privacy
+- type: WellKnown
+  url: well-known/goomp-inc-kalendar-ai-well-known.yml
+- type: Authentication
+  url: authentication/goomp-inc-kalendar-ai-authentication.yml
+- type: OAuthScopes
+  url: scopes/goomp-inc-kalendar-ai-scopes.yml
+- type: Conformance
+  url: conformance/goomp-inc-kalendar-ai-conformance.yml
+- type: Lifecycle
+  url: lifecycle/goomp-inc-kalendar-ai-lifecycle.yml
+- type: Plans
+  url: plans/goomp-inc-kalendar-ai-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/goomp-inc-kalendar-ai-rate-limits.yml
+- type: LLMsTxt
+  url: llms/goomp-inc-kalendar-ai-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 9
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    Contract discovery found the kalendar.ai -> oncockpit.ai rebrand and one real
+    provider-published machine-readable document (/.well-known/ai-plugin.json on the live API
+    host). No OpenAPI, GraphQL, MCP or agent card exists on any host.
