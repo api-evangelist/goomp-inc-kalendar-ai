@@ -1,0 +1,23 @@
+generated: '2026-08-13'
+method: searched
+source: https://api.oncockpit.ai/.well-known/ai-plugin.json
+docs: null
+note: >-
+  These are the only OAuth scopes this company publishes anywhere. They come verbatim from the
+  `auth.scope` field ("read write") of the live ChatGPT plugin manifest on its own API host. There
+  is no scopes/permissions reference page and no OpenAPI oauth2 securityScheme to derive a richer
+  set from, so the descriptions below are the coarse, literal meaning of the two tokens — nothing
+  further is claimed.
+scheme: oauth2
+authorization_url: https://kalendar.ai/chatgpt/authorize_callback.json
+scope_count: 2
+scopes:
+- name: read
+  description: Read access to the authorizing user's KalendarAI/Cockpit account data.
+  source: ai-plugin.json auth.scope
+- name: write
+  description: Write access to the authorizing user's KalendarAI/Cockpit account data.
+  source: ai-plugin.json auth.scope
+gaps:
+- No per-resource or granular scopes are published.
+- No consent screen or scope reference documentation is publicly reachable.

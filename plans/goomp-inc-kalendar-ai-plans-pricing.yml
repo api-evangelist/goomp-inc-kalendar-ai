@@ -1,0 +1,25 @@
+generated: '2026-08-13'
+method: searched
+source: https://oncockpit.ai/ and https://oncockpit.ai/vinay
+plan_count: 0
+currency: null
+note: >-
+  Cockpit AI (formerly Kalendar AI) publishes no pricing page and no plan tiers. The marketing
+  site has no /pricing route — https://oncockpit.ai/pricing returns the same 5,130-byte SPA
+  catch-all shell as a nonsense control path, so it is a soft 404, not a page. The product pages
+  (/vinay, /amara) contain no price, no currency symbol and no "per month" language anywhere in
+  their rendered text; every call to action is "Hire Vinay", which links to a 30-minute booking on
+  https://cal.com/cockpit-ai-tkthdj/30min. This is a sales-led, quote-on-request motion. Third
+  party directories still quote a 2021-era "$299" figure for the retired Kalendar AI product; that
+  is not published by the provider and is deliberately not recorded here.
+plans: []
+evidence:
+- url: https://oncockpit.ai/pricing
+  status: 200
+  note: SPA catch-all shell, byte-identical to /zzz-does-not-exist-12345 (soft 404)
+- url: https://oncockpit.ai/vinay
+  status: 200
+  note: real product page (132 KB), contains no price or billing terms
+- url: https://cal.com/cockpit-ai-tkthdj/30min
+  status: 200
+  note: the only conversion path published — a demo booking, not a self-serve plan

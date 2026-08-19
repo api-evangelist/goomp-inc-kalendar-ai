@@ -1,0 +1,25 @@
+generated: '2026-08-13'
+method: searched
+source: https://oncockpit.ai/ and https://api.oncockpit.ai/
+limit_count: 0
+note: >-
+  No rate limits are published. There is no developer portal, no API reference and no OpenAPI on
+  any reachable host, so there is nothing to read a documented limit from. The unauthenticated
+  responses the API host does serve carry no rate-limit signalling of any kind — no
+  X-RateLimit-*, no RateLimit-*, no Retry-After. The only product-side throughput number the
+  company publishes is an operational capacity figure on the marketing page ("300 emails/day"
+  across three sending accounts), which describes the outbound worker's sending capacity, not an
+  API rate limit, and is deliberately not recorded as one.
+limits: []
+headers_observed: []
+evidence:
+- url: https://api.oncockpit.ai/
+  status: 200
+  content_type: application/json
+  note: no rate-limit response headers present
+- url: https://api.oncockpit.ai/health
+  status: 200
+  note: no rate-limit response headers present
+- url: https://oncockpit.ai/docs
+  status: 200
+  note: SPA catch-all shell, byte-identical to a nonsense control path (soft 404) — no docs exist

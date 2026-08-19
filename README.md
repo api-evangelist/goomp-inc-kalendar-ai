@@ -42,6 +42,6 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Goomp Inc, Kalendar AI is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Goomp Inc, Kalendar AI is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network. As of the 2026-08-13 enrichment pass the company has rebranded to **Cockpit AI** and migrated to `oncockpit.ai`; `kalendar.ai` 301-redirects site-wide. It runs a live API host (`api.oncockpit.ai`) and still serves a legacy ChatGPT plugin manifest at `/.well-known/ai-plugin.json`, but publishes no developer portal, API reference, OpenAPI, SDK, webhook catalog, MCP server or pricing page.
 
-Backed by: 500-global — https://kalendar.ai
+Backed by: 500-global — https://oncockpit.ai (formerly https://kalendar.ai)

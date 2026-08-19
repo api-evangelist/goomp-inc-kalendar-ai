@@ -1,0 +1,62 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of kalendar.ai and oncockpit.ai on 2026-08-13
+note: >-
+  This provider went through a brand and domain migration between enrichment rounds. It publishes
+  no versioning policy, no deprecation policy, no Sunset/Deprecation header documentation, no SLA
+  and no status page — so the entries below record what was OBSERVED, not a policy the company
+  states.
+versioning:
+  scheme: path
+  evidence: >-
+    The API host exposes a /cockpit_os/v1/public/... namespace (observed in asset URLs on the
+    oncockpit.ai homepage, e.g.
+    https://v1.oncockpit.ai/cockpit_os/v1/public/media/generated/105724/20260513175443_cccb1b153bebe1a3.png,
+    HTTP 200 image/png) and runs on the host v1.oncockpit.ai.
+  current_version: v1
+  policy_published: false
+deprecation:
+  policy_published: false
+  sunset_header_documented: false
+  note: No deprecation or sunset policy is published on any reachable host.
+status_page:
+  published: false
+  probed:
+  - url: https://oncockpit.ai/status
+    status: 200
+    note: >-
+      returns the site's 5,130-byte SPA catch-all shell — identical byte-for-byte to a nonsense
+      control path (/zzz-does-not-exist-12345), so this is a soft 404, not a status page
+sla:
+  published: false
+migrations:
+- from: kalendar.ai
+  to: oncockpit.ai
+  kind: brand-and-domain-migration
+  observed: '2026-08-13'
+  evidence:
+  - url: https://kalendar.ai/
+    status: 301
+    location: https://oncockpit.ai/
+  - url: https://kalendar.ai/robots.txt
+    status: 301
+    location: https://oncockpit.ai/robots.txt
+  - url: https://oncockpit.ai/robots.txt
+    status: 200
+    note: >-
+      contains an explicit "# Block legacy Kalendar.ai paths" section disallowing /users/,
+      /story/, /invitations/, /companies/ and /= — the operator's own statement that the two
+      domains are one property
+  retired_surfaces:
+  - url: https://kalendar.ai/openapi.yaml
+    was: the OpenAPI named by the company's own ChatGPT plugin manifest
+    now: 301 to https://oncockpit.ai/openapi.yaml, which returns the SPA shell (text/html)
+  - url: https://www.kalendar.ai/users/sign_in
+    was: the sign-in URL recorded in a previous enrichment round
+    now: www.kalendar.ai no longer resolves in DNS (NXDOMAIN via 8.8.8.8)
+  stale_artifacts:
+  - artifact: /.well-known/ai-plugin.json on api.oncockpit.ai
+    note: >-
+      still live and still branded "KalendarAI", still pointing at the retired
+      https://kalendar.ai/openapi.yaml — the manifest survived the migration but its contract
+      did not
