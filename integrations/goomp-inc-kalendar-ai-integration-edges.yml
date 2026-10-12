@@ -1,0 +1,20 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/goomp-inc-kalendar-ai/integrations
+- https://zapier.com/apps/goomp-inc-kalendar/integrations
+- https://n8n.io/integrations/goomp-inc-kalendar-ai/
+- https://n8n.io/integrations/goomp-inc-kalendar/
+- https://composio.dev/toolkits/goomp-inc-kalendar-ai
+- https://monid.ai/tools/goomp-inc-kalendar-ai
+checked:
+- https://composio.dev/toolkits/goomp-inc-kalendar-ai
+- https://monid.ai/tools/goomp-inc-kalendar-ai
+- https://n8n.io/integrations/goomp-inc-kalendar-ai/
+- https://n8n.io/integrations/goomp-inc-kalendar/
+- https://zapier.com/apps/goomp-inc-kalendar-ai/integrations
+- https://zapier.com/apps/goomp-inc-kalendar/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
