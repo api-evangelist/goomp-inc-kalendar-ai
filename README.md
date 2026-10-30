@@ -64,6 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Goomp Inc, Kalendar AI is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network. As of the 2026-08-13 enrichment pass the company has rebranded to **Cockpit AI** and migrated to `oncockpit.ai`; `kalendar.ai` 301-redirects site-wide. It runs a live API host (`api.oncockpit.ai`) and still serves a legacy ChatGPT plugin manifest at `/.well-known/ai-plugin.json`, but publishes no developer portal, API reference, OpenAPI, SDK, webhook catalog, MCP server or pricing page.
+Kalendar AI (Goomp Inc / Kalendar Inc, a Delaware corporation operating from New York) is an autonomous AI sales-agent platform that automates B2B outbound prospecting end to end. It sources ideal-customer prospects from a database of hundreds of millions of professionals and companies, generates and sends personalized outreach through dedicated AI-managed mailbox infrastructure, qualifies replies, and books meetings directly onto the user's calendar. As of the 2026-08-13 enrichment pass the company has rebranded to Cockpit AI and migrated to oncockpit.ai — kalendar.ai now 301-redirects site-wide, and the new site's robots.txt carries an explicit "Block legacy Kalendar.ai paths" section. The product is now framed as named AI workers you "hire" (Vinay for outbound, Amara), which research prospects, draft proposal documents, send from the customer's own email and LinkedIn accounts, and book meetings, with a human approval step before anything ships. Investors named on the site are 500 Global, Boost VC, Asymmetry Ventures and Village Global. The company runs a live API host (api.oncockpit.ai, which self-identifies as the "Cockpit AI API") and still serves a legacy ChatGPT plugin manifest at /.well-known/ai-plugin.json declaring OAuth with read/write scopes, but it publishes no developer portal, no API reference, no OpenAPI, no SDK, no webhook catalog, no MCP server and no pricing page.
 
-Backed by: 500-global — https://oncockpit.ai (formerly https://kalendar.ai)
+**Areas:** Company · Artificial Intelligence · Sales · Sales Automation · Outbound · Lead Generation · Scheduling · Agents · Email · CRM
+
+## Goomp Inc, Kalendar AI on APIs.io
+
+Everything profiled for Goomp Inc, Kalendar AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/goomp-inc-kalendar-ai/](https://apis.io/providers/goomp-inc-kalendar-ai/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Cockpit AI API](https://apis.io/apis/goomp-inc-kalendar-ai/cockpit-ai-api/) — The API host behind the Cockpit AI (formerly Kalendar AI) product. The root of https://api.oncockpit.ai returns HTTP 200 with {"name":"Cockpit AI…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Goomp Inc Kalendar Ai Authentication](https://apis.io/security/goomp-inc-kalendar-ai/goomp-inc-kalendar-ai-authentication/)
+- [Goomp Inc Kalendar Ai Domain Security](https://apis.io/security/goomp-inc-kalendar-ai/goomp-inc-kalendar-ai-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Goomp Inc Kalendar Ai Scopes](https://apis.io/scopes/goomp-inc-kalendar-ai/goomp-inc-kalendar-ai-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Goomp Inc Kalendar Ai Plans Pricing](https://apis.io/plans/goomp-inc-kalendar-ai/goomp-inc-kalendar-ai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Goomp Inc Kalendar Ai Rate Limits](https://apis.io/rate-limits/goomp-inc-kalendar-ai/goomp-inc-kalendar-ai-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://oncockpit.ai)
+- [Sign up](https://oncockpit.ai/auth/login)
+- [Blog](https://oncockpit.ai/blog/)
+- [Terms of service](https://oncockpit.ai/terms)
+- [Privacy policy](https://oncockpit.ai/privacy)
+
+## API Evangelist rating
+
+**Kin Score 11.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 0.0 |
+
+**Agent readiness 5.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/goomp-inc-kalendar-ai/](https://apis.io/providers/goomp-inc-kalendar-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Goomp Inc, Kalendar AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/goomp-inc-kalendar-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
